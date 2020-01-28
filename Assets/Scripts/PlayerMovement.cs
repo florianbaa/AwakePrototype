@@ -17,10 +17,10 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal");
-
+       rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal");
+      
     }
 }
 
