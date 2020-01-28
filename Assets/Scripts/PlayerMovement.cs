@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     public string inputAxisName = "";
-    public float speed = 3f;
+    public float speed = 15f;
 
     Rigidbody rb;
 
@@ -17,9 +17,9 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-       rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal");
+       rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y;
       
     }
 }

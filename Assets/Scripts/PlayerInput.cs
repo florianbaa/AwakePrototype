@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    [Range (1, 10)]
-    public float jumpVelocity = 5f;
+    
+    public float jumpForce = 10f;
+    bool jumpable = true;
 
     IInputReceiver[] inputReceivers;
     Rigidbody rb;
-
-
 
     private void Start()
     {
@@ -22,9 +21,15 @@ public class PlayerInput : MonoBehaviour
         inputReceivers = GetComponentsInChildren<IInputReceiver>();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        jumpable = true;
+    }
+
 
     void Update()
     {
+
         if (Input.GetButtonDown("Fire1"))
         {
             foreach(var inputReceiver in inputReceivers)
@@ -35,7 +40,11 @@ public class PlayerInput : MonoBehaviour
 
         if(Input.GetButtonDown("Jump"))
         {
-            rb.velocity = Vector3.up * jumpVelocity;
+            if(jumpable == true)
+            {
+                rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+                jumpable = false;
+            }
         }
 
     }
