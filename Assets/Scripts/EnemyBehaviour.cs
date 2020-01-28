@@ -26,8 +26,11 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else if (enemyDistance < 7)
         {
-                        transform.LookAt(player.transform);
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * Time.deltaTime);
+        }
+        else if (enemyDistance < 10 && enemyDistance > 7)
+        {
+            transform.LookAt(player.transform);
         }
 
     }
