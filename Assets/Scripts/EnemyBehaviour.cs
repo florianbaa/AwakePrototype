@@ -19,18 +19,19 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
         enemyDistance = Vector3.Distance(GameObject.FindWithTag("enemy").transform.position, GameObject.FindWithTag("Player").transform.position); ;
-        if (enemyDistance < 20 && enemyDistance > 10)
+
+        if (enemyDistance < 20)
         {
             transform.LookAt(player.transform);
+        }
+
+        if (enemyDistance < 20 && enemyDistance > 10)
+        {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
         }
         else if (enemyDistance < 7)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * Time.deltaTime);
-        }
-        else if (enemyDistance < 10 && enemyDistance > 7)
-        {
-            transform.LookAt(player.transform);
         }
 
     }
