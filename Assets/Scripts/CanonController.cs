@@ -6,6 +6,7 @@ public class CanonController : MonoBehaviour, IInputReceiver
 {
     public BulletPool bulletPool;
     public Transform cannonTransform;
+    
 
     public int bulletLayerId;
 
@@ -16,11 +17,10 @@ public class CanonController : MonoBehaviour, IInputReceiver
 
     void Shoot()
     {
-
         BulletBehaviour newBullet = bulletPool.GetObjectFromPool();
         newBullet.transform.SetPositionAndRotation(cannonTransform.position, cannonTransform.rotation);
 
-        newBullet.Fire(Vector3.zero, bulletLayerId);
+        newBullet.Fire(Vector3.zero, bulletLayerId, GetComponent<PlayerMovement>().lookingForward);
 
         newBullet.gameObject.SetActive(true);
     }
