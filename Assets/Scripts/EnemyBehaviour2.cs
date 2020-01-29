@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour
+public class EnemyBehaviour2 : MonoBehaviour
 {
     public GameObject player;
     public float movespeed = 20;
@@ -20,18 +20,10 @@ public class EnemyBehaviour : MonoBehaviour
     {
         //calculates distance
         enemyDistance = Vector3.Distance(GameObject.FindWithTag("enemy").transform.position, GameObject.FindWithTag("Player").transform.position);
-        /*groundDistance = Vector3.Distance(GameObject.FindWithTag("ground").transform.position, GameObject.FindWithTag("Player").transform.position);
-        {
-            if (groundDistance < 2)
-            {
-                transform.up;
-            }
-        }*/
 
-        //always aims when in range
         if (enemyDistance < 20)
         {
-            transform.LookAt(player.transform); 
+            transform.LookAt(player.transform);
         }
 
         //decides if it should move and how
@@ -45,7 +37,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
     }
-    
+
     private void OnDrawGizmos() //for shooting once implemented
     {
         Gizmos.color = Color.green;
