@@ -19,8 +19,9 @@ public class EnemyBehaviour2 : MonoBehaviour
     void Update()
     {
         //calculates distance
-        enemyDistance = Vector3.Distance(GameObject.FindWithTag("enemy").transform.position, GameObject.FindWithTag("Player").transform.position);
+        enemyDistance = Vector3.Distance(this.transform.position, GameObject.FindWithTag("Player").transform.position);
 
+        //always aims when in range
         if (enemyDistance < 20)
         {
             transform.LookAt(player.transform);
