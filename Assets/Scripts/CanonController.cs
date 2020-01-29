@@ -6,7 +6,14 @@ public class CanonController : MonoBehaviour, IInputReceiver
 {
     public BulletPool bulletPool;
     public Transform cannonTransform;
-    
+    public float recoil;
+    Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
 
     public int bulletLayerId;
 
@@ -23,6 +30,8 @@ public class CanonController : MonoBehaviour, IInputReceiver
         newBullet.Fire(Vector3.zero, bulletLayerId, GetComponent<PlayerMovement>().lookingForward);
 
         newBullet.gameObject.SetActive(true);
+
+        rb.AddForce(-recoil, 0, 0);
     }
 
 

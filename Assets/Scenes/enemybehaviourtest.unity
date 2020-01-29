@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05add4478399f3540ac9e9c2b3c19208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookingForward: 1
   inputAxisName: 
   speed: 15
 --- !u!114 &416250147
@@ -320,6 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 1125458271}
   cannonTransform: {fileID: 1170110030}
+  recoil: 750
   bulletLayerId: 8
 --- !u!114 &416250149
 MonoBehaviour:
