@@ -19,7 +19,8 @@ public class EnemyBehaviour2 : MonoBehaviour
     void Update()
     {
         //calculates distance
-        enemyDistance = Vector3.Distance(this.transform.position, GameObject.FindWithTag("Player").transform.position);
+        enemyDistance = Vector3.Distance(this.transform.position, player.transform.position);
+
 
         //always aims when in range
         if (enemyDistance < 20)
@@ -32,9 +33,9 @@ public class EnemyBehaviour2 : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
         }
-        else if (enemyDistance < 7)
+        else if (enemyDistance < 5)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * 3 * Time.deltaTime);
         }
 
     }
