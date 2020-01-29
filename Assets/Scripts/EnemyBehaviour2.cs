@@ -9,31 +9,51 @@ public class EnemyBehaviour2 : MonoBehaviour
     public float scandistance = 15f;
     public float enemyDistance;
     public float groundDistance;
+    Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //calculates distance
         enemyDistance = Vector3.Distance(this.transform.position, player.transform.position);
+        groundDistance = Vector3.Distance(this.transform.position, GameObject.FindWithTag("ground").transform.position);
 
+        // makes the drone hover, tweak values as necessary
+        rb.AddForce(0, 20, 0);
+        if (groundDistance < 2)
+        {
+            rb.AddForce(0, 5, 0);
+        }
+
+        else if (groundDistance >= 2 && groundDistance < 5)
+        {
+            rb.AddForce(0, 2, 0);
+        }
+
+        else if (groundDistance >= 5)
+        {
+            rb.AddForce(0, -18, 0);
+        }
 
         //always aims when in range
-        if (enemyDistance < 20)
+        if (enemyDistance <= 20)
         {
             transform.LookAt(player.transform);
         }
 
         //decides if it should move and how
-        if (enemyDistance < 20 && enemyDistance > 10)
+        if (enemyDistance <= 20 && enemyDistance >= 10)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
         }
-        else if (enemyDistance < 5)
+        else if (enemyDistance <= 5)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * 3 * Time.deltaTime);
         }

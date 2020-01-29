@@ -20,7 +20,7 @@ public class CanonController : MonoBehaviour, IInputReceiver
         BulletBehaviour newBullet = bulletPool.GetObjectFromPool();
         newBullet.transform.SetPositionAndRotation(cannonTransform.position, cannonTransform.rotation);
 
-        newBullet.Fire(Vector3.zero, bulletLayerId);//fehlt noch zeugs
+        newBullet.Fire(Vector3.zero, bulletLayerId);
 
         newBullet.gameObject.SetActive(true);
     }
