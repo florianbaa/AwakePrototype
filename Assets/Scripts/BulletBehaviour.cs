@@ -32,23 +32,14 @@ public class BulletBehaviour : MonoBehaviour
         DisableSelf();
     }
 
-    public void Fire(Vector3 inheritedVelocity, int bulletLayerId, bool lookingForward)
+    public void Fire(Vector3 inheritedVelocity, int bulletLayerId)
     {
         for(int i = 0; i<colliders.Length; i++)
         {
             colliders[i].gameObject.layer = bulletLayerId;
+            rb.velocity = inheritedVelocity + transform.forward * initialSpeed;
         }
 
-        if (lookingForward)
-        {
-        rb.velocity = inheritedVelocity + transform.forward * initialSpeed;
-
-        }
-        else
-        {
-            rb.velocity = inheritedVelocity + (transform.forward * -1f) * initialSpeed;
-
-        }
 
         Invoke("DisableSelf", lifeTime);
     }

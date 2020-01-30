@@ -442,7 +442,6 @@ GameObject:
   - component: {fileID: 916254454}
   - component: {fileID: 916254453}
   - component: {fileID: 916254452}
-  - component: {fileID: 916254458}
   - component: {fileID: 916254459}
   - component: {fileID: 916254460}
   m_Layer: 10
@@ -553,23 +552,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &916254458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916254451}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1604bde327cc1bf42b467c675edfc763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  movespeed: 2
-  scandistance: 15
-  enemyDistance: 0
-  groundDistance: 0
 --- !u!135 &916254459
 SphereCollider:
   m_ObjectHideFlags: 0

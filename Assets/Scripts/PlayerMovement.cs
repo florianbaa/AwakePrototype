@@ -5,8 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    private float hInput;
-    public bool lookingForward = true; 
+    public float hInput;
+    public bool lookingForward = true;
+     
 
     public string inputAxisName = "";
     public float speed = 15f;
@@ -18,18 +19,23 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    
     private void Update()
     {
         hInput = Input.GetAxis("Horizontal");
-        if(hInput == 1f)
+        if(hInput <= 1f && hInput > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
-            lookingForward = true;
+            // transform.localScale = new Vector3(1, 1, 1);
+            // lookingForward = true;
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+           
+
         }
-        else if( hInput == -1)
+        else if( hInput >= -1 && hInput < 0)
         {
-            transform.localScale = new Vector3(1, 1, -1);
-            lookingForward = false;
+            //  transform.localScale = new Vector3(1, 1, -1);
+            //  lookingForward = false;
+            transform.rotation = Quaternion.Euler(0, -90, 0);
         }
     }
 

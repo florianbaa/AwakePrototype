@@ -9,7 +9,47 @@ public class EnemyBehaviour2 : MonoBehaviour
     public float scandistance = 15f;
     public float enemyDistance;
     public float groundDistance;
+    public CanonController canonController;
+    PlayerMovement playerMovement;
+
+    public LayerMask targetLayerMask;
+    public float coolDown = 1f;
+    float timer = 0;
+
+    IInputReceiver[] inputReceivers;
     Rigidbody rb;
+
+    private void OnEnable()
+    {
+        inputReceivers = GetComponentsInChildren<IInputReceiver>();
+    }
+
+
+    private void Update()
+    {
+        if(timer < coolDown)
+        {
+            timer += Time.deltaTime;
+        }
+        else
+        {
+            if(Physics.Raycast(
+                transform.position,
+                transform.forward, 
+                out RaycastHit hitInfo, 
+                scandistance, 
+                targetLayerMask, 
+                QueryTriggerInteraction.Ignore))
+            {
+                foreach(var inputReceiver in inputReceivers)
+                {
+                    inputReceiver.OnFireDown();
+                }
+            }
+
+            timer = 0;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +97,6 @@ public class EnemyBehaviour2 : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * 3 * Time.deltaTime);
         }
-
     }
 
     private void OnDrawGizmos() //for shooting once implemented
