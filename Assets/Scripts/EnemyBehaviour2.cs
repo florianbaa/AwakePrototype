@@ -10,7 +10,7 @@ public class EnemyBehaviour2 : MonoBehaviour
     public float enemyDistance;
     public float groundDistance;
     public CanonController canonController;
-    PlayerMovement playerMovement;
+    
 
     public LayerMask targetLayerMask;
     public float coolDown = 1f;
@@ -23,7 +23,6 @@ public class EnemyBehaviour2 : MonoBehaviour
     {
         inputReceivers = GetComponentsInChildren<IInputReceiver>();
     }
-
 
     private void Update()
     {
