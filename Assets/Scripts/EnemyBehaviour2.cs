@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBehaviour2 : MonoBehaviour
 {
     public GameObject player;
+    public GameObject ground;
     public float movespeed = 20;
     public float scandistance = 15f;
     public float enemyDistance;
@@ -56,6 +57,7 @@ public class EnemyBehaviour2 : MonoBehaviour
     {
         player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody>();
+        ground = GameObject.FindWithTag("ground");
     }
 
     // Update is called once per frame
@@ -63,7 +65,7 @@ public class EnemyBehaviour2 : MonoBehaviour
     {
         //calculates distance
         enemyDistance = Vector3.Distance(this.transform.position, player.transform.position);
-        groundDistance = Vector3.Distance(this.transform.position, GameObject.FindWithTag("ground").transform.position);
+        groundDistance = Vector3.Distance(this.transform.position, ground.transform.position);
 
         // makes the drone hover, tweak values as necessary
         rb.AddForce(0, 20, 0);
