@@ -49,7 +49,25 @@ public class EnemyBehaviour2 : MonoBehaviour
             }
 
             timer = 0;
+
+
         }
+        
+            if (Physics.Raycast(
+                transform.position,
+                -transform.up,
+                out RaycastHit groundInfo,
+                groundscandistance,
+                targetLayerMask,
+                QueryTriggerInteraction.Ignore))
+            {
+                rb.AddForce(0, 13, 0);
+            }
+
+            timer = 0;
+
+
+        
     }
 
     // Start is called before the first frame update
@@ -68,7 +86,7 @@ public class EnemyBehaviour2 : MonoBehaviour
         groundDistance = Vector3.Distance(this.transform.position, ground.transform.position);
 
         // makes the drone hover, tweak values as necessary
-        rb.AddForce(0, 20, 0);
+        
         /*if (groundDistance < 2)
         {
             rb.AddForce(0, 5, 0);
