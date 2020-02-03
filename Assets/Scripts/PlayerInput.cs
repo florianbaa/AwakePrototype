@@ -7,6 +7,8 @@ public class PlayerInput : MonoBehaviour
     
     public float jumpForce = 10f;
     bool jumpable = true;
+    public float cooldown = 0.5f;
+    float timer = 0;
 
     public Animator animator;
     IInputReceiver[] inputReceivers;
@@ -26,26 +28,37 @@ public class PlayerInput : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         jumpable = true;
+        animator.SetTrigger("jump_end");
     }
 
 
     void Update()
     {
 
-        if (Input.GetButton("Fire1"))
+        if(timer < cooldown)
         {
-            foreach(var inputReceiver in inputReceivers)
-            {
-                inputReceiver.OnFireDown();
-            }
-            animator.SetBool("shooting", true);
-            
+            timer += Time.deltaTime;
         }
-        if (Input.GetButtonUp("Fire1"))
-        {          
-            animator.SetBool("shooting", false);
+        else
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                foreach (var inputReceiver in inputReceivers)
+                {
+                    inputReceiver.OnFireDown();
+                }
+                animator.SetBool("shooting", true);
+
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                animator.SetBool("shooting", false);
+            }
+
+            timer = 0;
         }
 
+       
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -54,8 +67,10 @@ public class PlayerInput : MonoBehaviour
                 rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
                 jumpable = false;
                 animator.SetTrigger("jump");
-                animator.SetTrigger("jump_end");
+                animator.ResetTrigger("jump_end");
+
             }
+
         }
 
     }

@@ -33,11 +33,22 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, -90, 0);           
         }
+
+        if(hInput > 0.1 || hInput < -0.1)
+        {
+            animator.SetBool("run", true);
+        }
+        else
+        {
+            animator.SetBool("run", false);
+        }
+
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y;      
+        rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y; 
+        
           
     }
 }
