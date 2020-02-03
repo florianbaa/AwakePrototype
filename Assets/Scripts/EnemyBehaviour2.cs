@@ -8,6 +8,7 @@ public class EnemyBehaviour2 : MonoBehaviour
     public GameObject ground;
     public float movespeed = 20;
     public float scandistance = 15f;
+    public float groundscandistance = 5f;
     public float enemyDistance;
     public float groundDistance;
     public CanonController canonController;
@@ -68,7 +69,7 @@ public class EnemyBehaviour2 : MonoBehaviour
 
         // makes the drone hover, tweak values as necessary
         rb.AddForce(0, 20, 0);
-        if (groundDistance < 2)
+        /*if (groundDistance < 2)
         {
             rb.AddForce(0, 5, 0);
         }
@@ -81,7 +82,8 @@ public class EnemyBehaviour2 : MonoBehaviour
         else if (groundDistance >= 5)
         {
             rb.AddForce(0, -18, 0);
-        }
+        }*/
+
 
         //always aims when in range
         if (enemyDistance <= 20)
@@ -104,6 +106,12 @@ public class EnemyBehaviour2 : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position, transform.forward * scandistance);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * groundscandistance);
+
+
+        
     }
 
 }
