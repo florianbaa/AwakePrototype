@@ -13,10 +13,12 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 15f;
 
     Rigidbody rb;
+    public Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     
@@ -25,23 +27,18 @@ public class PlayerMovement : MonoBehaviour
         hInput = Input.GetAxis("Horizontal");
         if(hInput <= 1f && hInput > 0)
         {
-            // transform.localScale = new Vector3(1, 1, 1);
-            // lookingForward = true;
             transform.rotation = Quaternion.Euler(0, 90, 0);
-           
-
         }
         else if( hInput >= -1 && hInput < 0)
         {
-            //  transform.localScale = new Vector3(1, 1, -1);
-            //  lookingForward = false;
-            transform.rotation = Quaternion.Euler(0, -90, 0);
+            transform.rotation = Quaternion.Euler(0, -90, 0);           
         }
     }
 
     private void FixedUpdate()
-    { 
-            rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y;        
+    {
+        rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y;      
+          
     }
 }
 
