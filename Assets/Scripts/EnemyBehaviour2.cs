@@ -15,6 +15,7 @@ public class EnemyBehaviour2 : MonoBehaviour
     
 
     public LayerMask targetLayerMask;
+    public LayerMask groundLayerMask;
     public float coolDown = 1f;
     float timer = 0;
 
@@ -58,7 +59,7 @@ public class EnemyBehaviour2 : MonoBehaviour
                 -transform.up,
                 out RaycastHit groundInfo,
                 groundscandistance,
-                targetLayerMask,
+                groundLayerMask,
                 QueryTriggerInteraction.Ignore))
             {
                 rb.AddForce(0, 13, 0);
