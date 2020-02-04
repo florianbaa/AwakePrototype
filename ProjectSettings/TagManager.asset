@@ -6,6 +6,8 @@ TagManager:
   tags:
   - enemy
   - ground
+  - Particle
+  - EnemieBullet
   layers:
   - Default
   - TransparentFX

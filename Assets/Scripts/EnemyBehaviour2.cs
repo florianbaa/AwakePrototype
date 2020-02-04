@@ -122,9 +122,7 @@ public class EnemyBehaviour2 : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * groundscandistance);
-
-
-        
+   
     }
 
 }
