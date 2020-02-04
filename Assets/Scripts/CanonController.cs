@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class CanonController : MonoBehaviour, IInputReceiver
 {
@@ -29,6 +30,7 @@ public class CanonController : MonoBehaviour, IInputReceiver
     void Shoot()
     {
         //cannonTransform.position = Weapon_Barrel.position + new Vector3(0.2f, -2.05f, -0.05f);
+        CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
         BulletBehaviour newBullet = bulletPool.GetObjectFromPool();
         newBullet.transform.SetPositionAndRotation(Weapon_Barrel.position, Weapon_Barrel.rotation);
 
