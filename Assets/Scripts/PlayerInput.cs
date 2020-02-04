@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class PlayerInput : MonoBehaviour
                     inputReceiver.OnFireDown();
                 }
                     //Weapon.transform.position = Hand.position + new Vector3(0.2f, -2.05f, -0.05f);
+                    CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
                     Weapon.SetActive(true);
                     animator.SetBool("shooting", true); 
             }
