@@ -8,8 +8,8 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     public int initialHp;
     int currentHp;
     public Animator animator;
-    GameObject obj;
-    
+    public GameObject Gore;
+
 
     private void Awake()
     {
@@ -32,6 +32,7 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
 
         void Die()
         {
+            GameObject.Instantiate(Gore, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
