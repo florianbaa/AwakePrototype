@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4398468938177200, guid: 6d2e3ff93a24cdc4692bd749280c96c5, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4398468938177200, guid: 6d2e3ff93a24cdc4692bd749280c96c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4813731218482848, guid: f74a85b2d013fb14b8261bc593134c13, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4813731218482848, guid: f74a85b2d013fb14b8261bc593134c13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1284,7 +1284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4398468938177200, guid: 6d2e3ff93a24cdc4692bd749280c96c5, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4398468938177200, guid: 6d2e3ff93a24cdc4692bd749280c96c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1307,6 +1307,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5731546043291435418, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731546043291435418, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5731546043291435393, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1345,7 +1355,7 @@ PrefabInstance:
     - target: {fileID: 5731546043291435393, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5731546043291435393, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
@@ -1362,23 +1372,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5731546043291435418, guid: 28262078ee07647af935080ef63742ff,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemy (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5731546043291435419, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
       propertyPath: Gore
       value: 
       objectReference: {fileID: 100006, guid: 08e88d02ad27e0746a6ee07f0aff92eb, type: 3}
+    - target: {fileID: 5731546043291435419, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5731546043291435397, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
       propertyPath: MuzzleFlash
       value: 
       objectReference: {fileID: 8583773808876667154, guid: 36f1a3a8e454743b9829f1691077fcde,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5731546043291435419, guid: 28262078ee07647af935080ef63742ff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 28262078ee07647af935080ef63742ff, type: 3}
 --- !u!1 &896075891 stripped
 GameObject:
@@ -1477,7 +1488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4534512508212348, guid: 21e93e3c4dcc475448060e7fecbebe83, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4534512508212348, guid: 21e93e3c4dcc475448060e7fecbebe83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2392,7 +2403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4877616340960066, guid: 247529b36066dff46b91d5c7fcf05451, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4877616340960066, guid: 247529b36066dff46b91d5c7fcf05451, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2832,7 +2843,7 @@ PrefabInstance:
     - target: {fileID: 1744483458728572565, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: initialHp
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1744483458728572565, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
@@ -2863,8 +2874,25 @@ PrefabInstance:
     - target: {fileID: 1744483459836603168, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1744483459836603173, guid: f6bcbd8b8ca464225a0294fac34df2bc,
+        type: 3}
+      propertyPath: Gore
+      value: 
+      objectReference: {fileID: 8583773808876667154, guid: 36f1a3a8e454743b9829f1691077fcde,
+        type: 3}
+    - target: {fileID: 1744483459836603173, guid: f6bcbd8b8ca464225a0294fac34df2bc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744483459836603171, guid: f6bcbd8b8ca464225a0294fac34df2bc,
+        type: 3}
+      propertyPath: MuzzleFlash
+      value: 
+      objectReference: {fileID: 8583773808876667154, guid: 36f1a3a8e454743b9829f1691077fcde,
+        type: 3}
     - target: {fileID: 1744483458686204810, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: m_IsActive
@@ -2878,7 +2906,7 @@ PrefabInstance:
     - target: {fileID: 1744483460588485047, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1744483460588485046, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
@@ -2886,6 +2914,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8583773808876667154, guid: 36f1a3a8e454743b9829f1691077fcde,
         type: 3}
+    - target: {fileID: 1744483460588485046, guid: f6bcbd8b8ca464225a0294fac34df2bc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1744483460588485032, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: MuzzleFlash
@@ -2911,6 +2944,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.413
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744483458670893780, guid: f6bcbd8b8ca464225a0294fac34df2bc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3726999667688034453, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
@@ -3012,18 +3050,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -57.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1744483459836603173, guid: f6bcbd8b8ca464225a0294fac34df2bc,
-        type: 3}
-      propertyPath: Gore
-      value: 
-      objectReference: {fileID: 8583773808876667154, guid: 36f1a3a8e454743b9829f1691077fcde,
-        type: 3}
-    - target: {fileID: 1744483459836603171, guid: f6bcbd8b8ca464225a0294fac34df2bc,
-        type: 3}
-      propertyPath: MuzzleFlash
-      value: 
-      objectReference: {fileID: 8583773808876667154, guid: 36f1a3a8e454743b9829f1691077fcde,
-        type: 3}
     m_RemovedComponents:
     - {fileID: 1744483459356729086, guid: f6bcbd8b8ca464225a0294fac34df2bc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f6bcbd8b8ca464225a0294fac34df2bc, type: 3}
