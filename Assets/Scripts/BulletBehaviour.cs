@@ -8,6 +8,7 @@ public class BulletBehaviour : MonoBehaviour
 {
     Rigidbody rb;
     Collider[] colliders;
+    
 
     public float initialSpeed = 10f;
     public float lifeTime = 3f;
@@ -30,6 +31,7 @@ public class BulletBehaviour : MonoBehaviour
             damageReceiver.DoDamage(damageAmount);
         }
         DisableSelf();
+
     }
 
     public void Fire(Vector3 inheritedVelocity, int bulletLayerId)

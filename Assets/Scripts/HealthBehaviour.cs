@@ -8,6 +8,7 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     public int initialHp;
     int currentHp;
     public Animator animator;
+    GameObject obj;
     
 
     private void Awake()
