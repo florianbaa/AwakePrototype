@@ -1843,6 +1843,7 @@ MonoBehaviour:
   initialHp: 1
   animator: {fileID: 0}
   Gore: {fileID: 0}
+  DeathAnim: {fileID: 0}
 --- !u!4 &1139898893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4534512508212348, guid: 21e93e3c4dcc475448060e7fecbebe83,
@@ -2701,13 +2702,19 @@ PrefabInstance:
     - target: {fileID: 1744483458728572565, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: initialHp
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1744483458728572565, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: Gore
       value: 
       objectReference: {fileID: 100006, guid: 08e88d02ad27e0746a6ee07f0aff92eb, type: 3}
+    - target: {fileID: 1744483458728572565, guid: f6bcbd8b8ca464225a0294fac34df2bc,
+        type: 3}
+      propertyPath: DeathAnim
+      value: 
+      objectReference: {fileID: 8567723359316084434, guid: 6d630005aa6184903a1ee6122a1cff11,
+        type: 3}
     - target: {fileID: 1744483459050486150, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: smoothSpeed
@@ -2726,7 +2733,7 @@ PrefabInstance:
     - target: {fileID: 1744483459836603168, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1744483458686204810, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
@@ -2741,7 +2748,7 @@ PrefabInstance:
     - target: {fileID: 1744483460588485047, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1744483460588485046, guid: f6bcbd8b8ca464225a0294fac34df2bc,
         type: 3}
