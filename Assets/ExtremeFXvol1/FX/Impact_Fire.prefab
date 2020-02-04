@@ -47,7 +47,7 @@ ParticleSystem:
   m_GameObject: {fileID: 100002}
   serializedVersion: 6
   lengthInSec: 0.1
-  simulationSpeed: 1
+  simulationSpeed: 100
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
@@ -552,7 +552,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 200
+    maxNumParticles: 1
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -698,7 +698,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.037216198
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -4779,7 +4779,7 @@ MonoBehaviour:
   Force: {x: 1000, y: 1000, z: 1000}
   Objcet: {fileID: 100000, guid: 69df03a5712f5194a894cc3938f156a4, type: 3}
   Num: 10
-  Scale: 20
+  Scale: 10
   ScaleMin: 10
   Sounds: []
   LifeTimeObject: 1

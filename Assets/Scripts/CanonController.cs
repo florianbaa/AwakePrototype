@@ -6,6 +6,7 @@ public class CanonController : MonoBehaviour, IInputReceiver
 {
     public BulletPool bulletPool;
     public Transform cannonTransform;
+    public Transform Weapon_Barrel;
     public int bulletLayerId;
     public float recoil;
     public GameObject MuzzleFlash;
@@ -29,7 +30,7 @@ public class CanonController : MonoBehaviour, IInputReceiver
         BulletBehaviour newBullet = bulletPool.GetObjectFromPool();
         newBullet.transform.SetPositionAndRotation(cannonTransform.position,cannonTransform.rotation);
 
-        GameObject.Instantiate(MuzzleFlash, cannonTransform.position + new Vector3(1,-1,0), cannonTransform.rotation);
+        GameObject.Instantiate(MuzzleFlash, Weapon_Barrel.position + new Vector3(0.4f,-0.8f,-0.1f), Weapon_Barrel.rotation);
         newBullet.Fire(Vector3.zero, bulletLayerId);
 
         newBullet.gameObject.SetActive(true);

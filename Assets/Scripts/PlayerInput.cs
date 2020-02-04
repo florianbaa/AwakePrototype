@@ -9,6 +9,8 @@ public class PlayerInput : MonoBehaviour
     bool jumpable = true;
     public float cooldown = 0.5f;
     float timer = 0;
+    public GameObject Weapon;
+    public Transform Hand;
 
     public Animator animator;
     IInputReceiver[] inputReceivers;
@@ -34,8 +36,9 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
+        Weapon.transform.position = Hand.position + new Vector3(0.2f, -2.05f, -0.05f);
 
-        if(timer < cooldown)
+        if (timer < cooldown)
         {
             timer += Time.deltaTime;
         }
@@ -47,10 +50,13 @@ public class PlayerInput : MonoBehaviour
                 {
                     inputReceiver.OnFireDown();
                 }
+                    //Weapon.transform.position = Hand.position + new Vector3(0.2f, -2.05f, -0.05f);
+                    Weapon.SetActive(true);
                     animator.SetBool("shooting", true); 
             }
             else
             {
+                Weapon.SetActive(false);
                 animator.SetBool("shooting", false);
             }
 
