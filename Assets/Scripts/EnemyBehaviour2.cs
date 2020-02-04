@@ -76,43 +76,47 @@ public class EnemyBehaviour2 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //calculates distance
-        enemyDistance = Vector3.Distance(this.transform.position, player.transform.position);
-        groundDistance = Vector3.Distance(this.transform.position, ground.transform.position);
 
-        // makes the drone hover, tweak values as necessary
-        
-        /*if (groundDistance < 2)
+        if(player != null)
         {
-            rb.AddForce(0, 5, 0);
-        }
+            //calculates distance
+            enemyDistance = Vector3.Distance(this.transform.position, player.transform.position);
+            groundDistance = Vector3.Distance(this.transform.position, ground.transform.position);
 
-        else if (groundDistance >= 2 && groundDistance < 5)
-        {
-            rb.AddForce(0, 2, 0);
-        }
+            // makes the drone hover, tweak values as necessary
 
-        else if (groundDistance >= 5)
-        {
-            rb.AddForce(0, -18, 0);
-        }*/
+            /*if (groundDistance < 2)
+            {
+                rb.AddForce(0, 5, 0);
+            }
+
+            else if (groundDistance >= 2 && groundDistance < 5)
+            {
+                rb.AddForce(0, 2, 0);
+            }
+
+            else if (groundDistance >= 5)
+            {
+                rb.AddForce(0, -18, 0);
+            }*/
 
 
-        //always aims when in range
-        if (enemyDistance <= 20)
-        {
-            transform.LookAt(player.transform);
-        }
+            //always aims when in range
+            if (enemyDistance <= 20)
+            {
+                transform.LookAt(player.transform);
+            }
 
-        //decides if it should move and how
-        if (enemyDistance <= 20 && enemyDistance >= 10)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
-        }
-        else if (enemyDistance <= 5)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * 3 * Time.deltaTime);
-        }
+            //decides if it should move and how
+            if (enemyDistance <= 20 && enemyDistance >= 10)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
+            }
+            else if (enemyDistance <= 5)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * 3 * Time.deltaTime);
+            }
+        }      
     }
 
     private void OnDrawGizmos() //for shooting once implemented
