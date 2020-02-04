@@ -8,6 +8,7 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     public int initialHp;
     int currentHp;
     public Animator animator;
+    
 
     private void Awake()
     {
@@ -20,10 +21,6 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     }
 
 
-   
-       
-    
-
     public void DoDamage(int amount)
     {
         currentHp -= amount;
@@ -33,8 +30,8 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
         }
 
         void Die()
-        {      
-            animator.SetTrigger("death");            
+        {
+            Destroy(gameObject);
         }
     }
 }

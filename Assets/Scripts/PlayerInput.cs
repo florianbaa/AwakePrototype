@@ -47,19 +47,16 @@ public class PlayerInput : MonoBehaviour
                 {
                     inputReceiver.OnFireDown();
                 }
-                animator.SetBool("shooting", true);
-
+                    animator.SetBool("shooting", true); 
             }
-            if (Input.GetButtonUp("Fire1"))
+            else
             {
                 animator.SetBool("shooting", false);
             }
 
             timer = 0;
         }
-
-       
-
+      
         if (Input.GetButtonDown("Jump"))
         {
             if(jumpable == true)
@@ -68,10 +65,7 @@ public class PlayerInput : MonoBehaviour
                 jumpable = false;
                 animator.SetTrigger("jump");
                 animator.ResetTrigger("jump_end");
-
             }
-
         }
-
     }
 }

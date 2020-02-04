@@ -50,8 +50,6 @@ public class EnemyBehaviour2 : MonoBehaviour
             }
 
             timer = 0;
-
-
         }
         
             if (Physics.Raycast(
@@ -64,11 +62,7 @@ public class EnemyBehaviour2 : MonoBehaviour
             {
                 rb.AddForce(0, 13, 0);
             }
-
-            timer = 0;
-
-
-        
+            
     }
 
     // Start is called before the first frame update

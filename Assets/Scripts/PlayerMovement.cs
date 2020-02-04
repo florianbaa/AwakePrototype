@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
     public Animator animator;
+    
 
     private void Awake()
     {
@@ -41,15 +42,14 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("run", false);
-        }
-
+        }   
+           
     }
 
     private void FixedUpdate()
     {
         rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y; 
-        
-          
+             
     }
 }
 

@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 10
+  cooldown: 0.5
   animator: {fileID: 0}
 --- !u!114 &416250148
 MonoBehaviour:
@@ -467,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHp: 5
+  animator: {fileID: 0}
 --- !u!54 &916254453
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -589,6 +591,9 @@ MonoBehaviour:
   groundDistance: 0
   canonController: {fileID: 0}
   targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  groundLayerMask:
     serializedVersion: 2
     m_Bits: 2048
   coolDown: 1
@@ -1010,6 +1015,9 @@ MonoBehaviour:
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 2048
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
   coolDown: 1
 --- !u!135 &1987809546
 SphereCollider:
@@ -1037,6 +1045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHp: 5
+  animator: {fileID: 0}
 --- !u!54 &1987809549
 Rigidbody:
   m_ObjectHideFlags: 0

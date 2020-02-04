@@ -10,19 +10,16 @@ public class CanonController : MonoBehaviour, IInputReceiver
     public float recoil;
     PlayerMovement playerMovement;
     Rigidbody rb;
+    
+
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        
+        rb = GetComponent<Rigidbody>();  
     }
 
-
-    
-
     public void OnFireDown()
-    {
-       
+    { 
         Shoot();
     }
 
@@ -35,8 +32,8 @@ public class CanonController : MonoBehaviour, IInputReceiver
 
         newBullet.gameObject.SetActive(true);
 
-        rb.AddForce(-recoil, 0, 0);
-         
+        rb.AddRelativeForce(Vector3.forward * -recoil);
+  
     }
 
 
