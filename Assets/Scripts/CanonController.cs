@@ -20,6 +20,7 @@ public class CanonController : MonoBehaviour, IInputReceiver
         rb = GetComponent<Rigidbody>();  
     }
 
+
     public void OnFireDown()
     { 
         Shoot();
@@ -27,8 +28,9 @@ public class CanonController : MonoBehaviour, IInputReceiver
 
     void Shoot()
     {
+        //cannonTransform.position = Weapon_Barrel.position + new Vector3(0.2f, -2.05f, -0.05f);
         BulletBehaviour newBullet = bulletPool.GetObjectFromPool();
-        newBullet.transform.SetPositionAndRotation(cannonTransform.position,cannonTransform.rotation);
+        newBullet.transform.SetPositionAndRotation(Weapon_Barrel.position, Weapon_Barrel.rotation);
 
         GameObject.Instantiate(MuzzleFlash, Weapon_Barrel.position + new Vector3(0.4f,-0.8f,-0.1f), Weapon_Barrel.rotation);
         newBullet.Fire(Vector3.zero, bulletLayerId);
