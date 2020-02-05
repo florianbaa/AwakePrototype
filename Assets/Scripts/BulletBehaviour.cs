@@ -13,6 +13,7 @@ public class BulletBehaviour : MonoBehaviour
     public float initialSpeed = 10f;
     public float lifeTime = 3f;
     public int damageAmount = 1;
+    public GameObject CollisionFX;
 
 
     private void Awake()
@@ -30,6 +31,12 @@ public class BulletBehaviour : MonoBehaviour
         {
             damageReceiver.DoDamage(damageAmount);
         }
+
+        else
+        {
+            GameObject.Instantiate(CollisionFX, transform.position, Quaternion.identity);
+        }
+
         DisableSelf();
 
     }
@@ -44,8 +51,12 @@ public class BulletBehaviour : MonoBehaviour
     {
         for(int i = 0; i<colliders.Length; i++)
         {
-            colliders[i].gameObject.layer = bulletLayerId;
-            rb.velocity = inheritedVelocity + transform.forward * initialSpeed;
+            if(colliders[i] != null)
+            {
+                colliders[i].gameObject.layer = bulletLayerId;
+                rb.velocity = inheritedVelocity + transform.forward * initialSpeed;
+            }
+           
         }
 
 
