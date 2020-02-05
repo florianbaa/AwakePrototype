@@ -20,7 +20,6 @@ public class HealthbarController : MonoBehaviour
     public Sprite h10;
     public Sprite h0;
 
-
     public void onTakeDamage(int damage)
     {
         health = health - damage;
@@ -69,13 +68,7 @@ public class HealthbarController : MonoBehaviour
         {
             healthbar.sprite = h0;
         }
-
-
-
-
     }
-
-
 }
 
 
