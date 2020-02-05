@@ -12,6 +12,7 @@ TagManager:
   - EndGate
   - HealthStationTag
   - Tutorial3
+  - Tutorial4
   layers:
   - Default
   - TransparentFX

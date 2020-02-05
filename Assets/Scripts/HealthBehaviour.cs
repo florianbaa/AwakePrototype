@@ -43,6 +43,10 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
         {
             SceneManager.LoadScene(3);
         }
+        if (other.gameObject.tag == "Tutorial4")
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     public void DoDamage(int amount)
