@@ -10,7 +10,6 @@ public class HealthBehaviourEnemy : MonoBehaviour, IDamagable
     public Animator animator;
     public GameObject DeathAnimEnemy;
 
-
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -27,6 +26,7 @@ public class HealthBehaviourEnemy : MonoBehaviour, IDamagable
         currentHp -= amount;
         if (currentHp <= 0)
         {
+            GameObject.Find("Player").GetComponent<HealthBehaviour>().enemyCounter += 1;
             Die();
         }
 

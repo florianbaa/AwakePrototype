@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthBehaviour : MonoBehaviour, IDamagable
 {
@@ -10,8 +11,10 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     public Animator animator;
     public GameObject Gore;
     public GameObject DeathAnim;
+    public GameObject SceneQuit;
 
-
+    public int enemyCounter;
+    
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -21,21 +24,30 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     {
         currentHp = initialHp;
     }
-
+    public void Update()
+    {
+        if (enemyCounter >= 100)
+        {
+            SceneQuit.SetActive(true);
+        }
+    }
 
     public void DoDamage(int amount)
     {
         currentHp -= amount;
         if (currentHp <= 0)
         {
-            Die();
-        }
-
-        void Die()
-        {
+            GameObject.Find("SceneLoad").GetComponent<Die>().DoNow();
             GameObject.Instantiate(Gore, transform.position, Quaternion.identity);
             GameObject.Instantiate(DeathAnim, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
+        public IEnumerator Die()
+        {
+            
+            yield return new WaitForSeconds(2f);
+            SceneManager.LoadScene(2);
+            
+        }
 }
