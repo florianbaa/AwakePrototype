@@ -34,6 +34,12 @@ public class BulletBehaviour : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+    }
+
     public void Fire(Vector3 inheritedVelocity, int bulletLayerId)
     {
         for(int i = 0; i<colliders.Length; i++)

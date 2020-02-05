@@ -68,7 +68,7 @@ public class EnemyBehaviour2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("PlayerHead");
         rb = GetComponent<Rigidbody>();
         ground = GameObject.FindWithTag("ground");
     }
@@ -111,12 +111,15 @@ public class EnemyBehaviour2 : MonoBehaviour
             if (enemyDistance <= 20 && enemyDistance >= 10)
             {
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
+
             }
             else if (enemyDistance <= 5)
             {
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -movespeed * 3 * Time.deltaTime);
-            }
-        }      
+               
+            } 
+        }
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
     }
 
     private void OnDrawGizmos() //for shooting once implemented

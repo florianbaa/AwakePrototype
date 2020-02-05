@@ -32,7 +32,7 @@ public class CanonController : MonoBehaviour, IInputReceiver
         BulletBehaviour newBullet = bulletPool.GetObjectFromPool();
         newBullet.transform.SetPositionAndRotation(Weapon_Barrel.position, Weapon_Barrel.rotation);
 
-        GameObject.Instantiate(MuzzleFlash, Weapon_Barrel.position + new Vector3(0.4f,-0.8f,-0.1f), Weapon_Barrel.rotation);
+        GameObject.Instantiate(MuzzleFlash, Weapon_Barrel.position + new Vector3(0.4f,-0.8f,0f), Weapon_Barrel.rotation);
         newBullet.Fire(Vector3.zero, bulletLayerId);
 
         newBullet.gameObject.SetActive(true);
