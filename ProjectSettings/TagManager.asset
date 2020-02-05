@@ -8,6 +8,8 @@ TagManager:
   - ground
   - Particle
   - EnemieBullet
+  - Bullet
+  - EndGate
   layers:
   - Default
   - TransparentFX

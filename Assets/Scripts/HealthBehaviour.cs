@@ -36,7 +36,7 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     {
         if(other.gameObject.tag == "EndGate")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }
     }
 
