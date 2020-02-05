@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public float xPos;
     public float yPos;
     public int counter;
-    
+/*
     private void Start()
     {
         StartCoroutine(EnemySpawn());
@@ -17,17 +17,18 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator EnemySpawn()
     {
-        while (counter < 100)
-        {
-            xPos = Random.Range(50, 210);
-            yPos = Random.Range(10, 25);
+        xPos = 50;
+        yPos = 25;
+        while (counter < 50)
+        { 
             Instantiate(enemy, new Vector3(xPos, yPos, 0), Quaternion.identity);
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(1);
             counter += 1;
+            xPos += 3;
         }
     }
 
-
+    */
 
 
 }

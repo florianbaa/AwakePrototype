@@ -26,9 +26,17 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     }
     public void Update()
     {
-        if (enemyCounter >= 100)
+        if (enemyCounter >= 20)
         {
             SceneQuit.SetActive(true);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "EndGate")
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
