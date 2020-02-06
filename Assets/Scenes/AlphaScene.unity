@@ -16449,6 +16449,7 @@ GameObject:
   - component: {fileID: 765572871}
   - component: {fileID: 765572873}
   - component: {fileID: 765572872}
+  - component: {fileID: 765572874}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -16538,7 +16539,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 1680926696}
+  m_TargetTexture: {fileID: 1241156348}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -16548,6 +16549,22 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &765572874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765572870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 2.259998, y: 2.21, z: -10}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &765781178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 762697689904973127, guid: 4441253de493e7547a9a2c27bc6a8184,
@@ -26001,6 +26018,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.65433526, y: 1.0181274, z: 2.2904127}
   m_Center: {x: -0.0000076293945, y: 0.5090637, z: 0.000000536442}
+--- !u!84 &1241156348
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 427
+  m_Height: 208
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 74
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1242201203 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3135053681059514576, guid: 6b2c71949fcf6134ca01043f5510d6ab,
@@ -35656,40 +35707,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.007283, y: 4.2813473, z: 8.672654}
   m_Center: {x: -0.0000019073486, y: 2.1406746, z: -0.00006914139}
---- !u!84 &1680926696
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 427
-  m_Height: 208
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 74
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1681666547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 763209711564608456, guid: 4441253de493e7547a9a2c27bc6a8184,
@@ -41695,16 +41712,16 @@ PrefabInstance:
     - target: {fileID: 4734000773450584562, guid: f20f212d22357413a987645097e373dd,
         type: 3}
       propertyPath: m_Text
-      value: 'Kill all
+      value: 'save the city &
 
-        enemies'
+        defeat all opponents'
       objectReference: {fileID: 0}
     - target: {fileID: 4734000774083027054, guid: f20f212d22357413a987645097e373dd,
         type: 3}
       propertyPath: m_Text
-      value: 'Kill all
+      value: 'save the city &
 
-        enemies'
+        defeat all opponents'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20f212d22357413a987645097e373dd, type: 3}
@@ -51314,7 +51331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7faaad9f6e9f4314998034014550d98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHp: 100
+  initialHp: 10
   animator: {fileID: 486261987}
   Gore: {fileID: 100006, guid: 08e88d02ad27e0746a6ee07f0aff92eb, type: 3}
   DeathAnim: {fileID: 8567723359316084434, guid: 6d630005aa6184903a1ee6122a1cff11,
@@ -51440,7 +51457,6 @@ GameObject:
   - component: {fileID: 1744483460432214519}
   - component: {fileID: 1744483460432214512}
   - component: {fileID: 1744483460432214513}
-  - component: {fileID: 1744483460432214515}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -51448,22 +51464,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1744483460432214515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744483460432214514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
-  DefaultRotInfluence: {x: 1, y: 1, z: 1}
-  RestPositionOffset: {x: 0, y: 0, z: 0}
-  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &1744483460432214519
 Transform:
   m_ObjectHideFlags: 0
