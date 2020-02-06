@@ -9,11 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: e911be1725ef447d3b8734f8a44f49a2
   - enabled: 1
-    path: Assets/Scenes/AlphaScene.unity
-    guid: a78d00b91ef8a42e4904856823ce8f1d
-  - enabled: 1
     path: Assets/Scenes/Restart.unity
     guid: 70f143c6ea9f4457d951a793ea4a4d5b
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 438828e8b137d4aa18f46e3107eb4041
+  - enabled: 1
+    path: Assets/Scenes/Tutorial3.unity
+    guid: bd1df9ae032724cdbb78c2c8979d7eac
+  - enabled: 1
+    path: Assets/Scenes/Tutorial2.unity
+    guid: 5dabcade96c624469b28b44f758dfd31
+  - enabled: 1
+    path: Assets/Scenes/Tutorial4.unity
+    guid: 64672911fcaab4d8d8aed0cef05d8680
+  - enabled: 1
+    path: Assets/Scenes/AlphaScene.unity
+    guid: a78d00b91ef8a42e4904856823ce8f1d
   - enabled: 1
     path: Assets/Scenes/win.unity
     guid: 83118c0725a0140dda97445da416e605
