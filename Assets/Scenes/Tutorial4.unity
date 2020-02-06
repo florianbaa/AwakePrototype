@@ -860,6 +860,20 @@ PrefabInstance:
       propertyPath: TextProceed
       value: 
       objectReference: {fileID: 907405618}
+    - target: {fileID: 7424832280118236785, guid: 7384b3a619dc148feb3c3951c33d9dae,
+        type: 3}
+      propertyPath: m_Text
+      value: 'hold left mouse button
+
+        to shoot'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424832280659591128, guid: 7384b3a619dc148feb3c3951c33d9dae,
+        type: 3}
+      propertyPath: m_Text
+      value: 'hold left mouse button
+
+        to shoot'
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7424832280758416475, guid: 7384b3a619dc148feb3c3951c33d9dae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7384b3a619dc148feb3c3951c33d9dae, type: 3}
@@ -936,7 +950,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 2095333011}
+  m_TargetTexture: {fileID: 1594911727}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -962,6 +976,40 @@ MonoBehaviour:
   DefaultRotInfluence: {x: 1, y: 1, z: 1}
   RestPositionOffset: {x: 2.259998, y: 2.21, z: -10}
   RestRotationOffset: {x: 0, y: 0, z: 0}
+--- !u!84 &1594911727
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 419
+  m_Height: 208
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 74
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1672509904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,37 +1215,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2cf1eb586650a459303407f63989bc, type: 3}
---- !u!84 &2095333011
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 419
-  m_Height: 208
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 74
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
