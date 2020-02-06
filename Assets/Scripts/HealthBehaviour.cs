@@ -51,7 +51,7 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     {
         if(other.gameObject.tag == "EndGate")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(7);
         }
 
         if (other.gameObject.tag == "Tutorial3")
@@ -60,7 +60,7 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
         }
         if (other.gameObject.tag == "Tutorial4")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(6);
         }
     }
 

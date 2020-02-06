@@ -9,7 +9,7 @@ public class RestartControl : MonoBehaviour
 
     public void ButtonRestart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(6);
     }
 
     public void ButtonMenu()

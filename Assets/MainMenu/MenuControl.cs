@@ -8,12 +8,12 @@ public class MenuControl : MonoBehaviour
 
    public void ButtonStart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void ButtonCredit()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(8);
     }
 
     public void ButtonQuit()
