@@ -10,6 +10,10 @@ public class CanonController : MonoBehaviour, IInputReceiver
     public int bulletLayerId;
     public float recoil;
     public GameObject MuzzleFlash;
+
+    public AudioClip gun1;
+    AudioSource audioSource;
+
     PlayerMovement playerMovement;
     Rigidbody rb;
     
@@ -31,6 +35,8 @@ public class CanonController : MonoBehaviour, IInputReceiver
         //cannonTransform.position = Weapon_Barrel.position + new Vector3(0.2f, -2.05f, -0.05f);
         BulletBehaviour newBullet = bulletPool.GetObjectFromPool();
         newBullet.transform.SetPositionAndRotation(Weapon_Barrel.position, Weapon_Barrel.rotation);
+
+        AudioSource.PlayClipAtPoint(gun1, transform.position);
 
         GameObject.Instantiate(MuzzleFlash, Weapon_Barrel.position + new Vector3(0.4f,-0.8f,0f), Weapon_Barrel.rotation);
         newBullet.Fire(Vector3.zero, bulletLayerId);

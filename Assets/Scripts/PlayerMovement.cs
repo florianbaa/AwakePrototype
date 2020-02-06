@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float hInput;
     public bool lookingForward = true;
-     
+
 
     public string inputAxisName = "";
     public float speed = 15f;
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y; 
+        rb.velocity = Vector3.right * speed * Input.GetAxis("Horizontal") + Vector3.up * rb.velocity.y;
              
     }
 }
