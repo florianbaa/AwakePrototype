@@ -10,6 +10,9 @@ public class HealthBehaviourEnemy : MonoBehaviour, IDamagable
     public Animator animator;
     public GameObject DeathAnimEnemy;
 
+    public AudioClip DeathDroneSFX;
+    AudioSource audioSource;
+
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -36,6 +39,7 @@ public class HealthBehaviourEnemy : MonoBehaviour, IDamagable
         void Die()
         {
             GameObject.Instantiate(DeathAnimEnemy, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(DeathDroneSFX, transform.position);
             Destroy(gameObject);
         }
     }
