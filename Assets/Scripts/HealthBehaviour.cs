@@ -12,8 +12,11 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     public GameObject Gore;
     public GameObject DeathAnim;
     public GameObject SceneQuit;
+    public GameObject TextKillAll;
+    public GameObject TextProceed;
 
     public int enemyCounter;
+    public static int quickEnemyCount;
     
     private void Awake()
     {
@@ -23,12 +26,24 @@ public class HealthBehaviour : MonoBehaviour, IDamagable
     void Start()
     {
         currentHp = initialHp;
+        SceneQuit.SetActive(false);
+        TextKillAll.SetActive(true);
+        TextProceed.SetActive(false);
     }
     public void Update()
     {
         if (enemyCounter >= 20)
         {
+            //SceneQuit.SetActive(true);
+            //TextKillAll.SetActive(false);
+            //TextProceed.SetActive(true);
+        }
+
+        if (quickEnemyCount >= 20)
+        {
             SceneQuit.SetActive(true);
+            TextKillAll.SetActive(false);
+            TextProceed.SetActive(true);
         }
     }
 

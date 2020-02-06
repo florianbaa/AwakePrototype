@@ -15,7 +15,6 @@ public class BulletBehaviour : MonoBehaviour
     public int damageAmount = 1;
     public GameObject CollisionFX;
 
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();

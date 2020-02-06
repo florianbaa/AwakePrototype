@@ -23,6 +23,9 @@ public class HealthBehaviourEnemy : MonoBehaviour, IDamagable
 
     public void DoDamage(int amount)
     {
+        HealthBehaviour.quickEnemyCount = HealthBehaviour.quickEnemyCount + 1;
+        Debug.Log("QEC: " + HealthBehaviour.quickEnemyCount);
+
         currentHp -= amount;
         if (currentHp <= 0)
         {
