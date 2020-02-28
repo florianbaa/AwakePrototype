@@ -187,11 +187,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5731546043291435397, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: gun1
+      value: 
+      objectReference: {fileID: 8300000, guid: 383a262a23f4240ccb42c2ee15993bbe, type: 3}
     - target: {fileID: 8633646348633717018, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
       propertyPath: initialHp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8633646348633717018, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: DeathDroneSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: f38fe961f5a1b43939b993d97f5a0c3a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28262078ee07647af935080ef63742ff, type: 3}
 --- !u!4 &153327851 stripped
@@ -350,11 +360,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5731546043291435397, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: gun1
+      value: 
+      objectReference: {fileID: 8300000, guid: 383a262a23f4240ccb42c2ee15993bbe, type: 3}
     - target: {fileID: 8633646348633717018, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
       propertyPath: initialHp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8633646348633717018, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: DeathDroneSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: f38fe961f5a1b43939b993d97f5a0c3a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28262078ee07647af935080ef63742ff, type: 3}
 --- !u!1001 &589850334
@@ -424,11 +444,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5731546043291435397, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: gun1
+      value: 
+      objectReference: {fileID: 8300000, guid: 383a262a23f4240ccb42c2ee15993bbe, type: 3}
     - target: {fileID: 8633646348633717018, guid: 28262078ee07647af935080ef63742ff,
         type: 3}
       propertyPath: initialHp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8633646348633717018, guid: 28262078ee07647af935080ef63742ff,
+        type: 3}
+      propertyPath: DeathDroneSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: f38fe961f5a1b43939b993d97f5a0c3a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28262078ee07647af935080ef63742ff, type: 3}
 --- !u!1 &907405618
@@ -874,6 +904,11 @@ PrefabInstance:
 
         to shoot'
       objectReference: {fileID: 0}
+    - target: {fileID: 626885182700481867, guid: 7384b3a619dc148feb3c3951c33d9dae,
+        type: 3}
+      propertyPath: gun1
+      value: 
+      objectReference: {fileID: 8300000, guid: e7e272fd0ce34474e95d0e74329eaa96, type: 3}
     m_RemovedComponents:
     - {fileID: 7424832280758416475, guid: 7384b3a619dc148feb3c3951c33d9dae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7384b3a619dc148feb3c3951c33d9dae, type: 3}
@@ -950,7 +985,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 1594911727}
+  m_TargetTexture: {fileID: 2057045798}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -976,40 +1011,6 @@ MonoBehaviour:
   DefaultRotInfluence: {x: 1, y: 1, z: 1}
   RestPositionOffset: {x: 2.259998, y: 2.21, z: -10}
   RestRotationOffset: {x: 0, y: 0, z: 0}
---- !u!84 &1594911727
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 419
-  m_Height: 208
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 74
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1672509904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,10 +1048,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153327851}
     m_Modifications:
-    - target: {fileID: 1954084764598762, guid: 4bda712f3633c1848a137f9f5f310588, type: 3}
-      propertyPath: m_Name
-      value: SM_Prop_Barrier_02 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4962049556227814, guid: 4bda712f3633c1848a137f9f5f310588, type: 3}
       propertyPath: m_LocalPosition.x
       value: -44.699997
@@ -1094,6 +1091,10 @@ PrefabInstance:
     - target: {fileID: 4962049556227814, guid: 4bda712f3633c1848a137f9f5f310588, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954084764598762, guid: 4bda712f3633c1848a137f9f5f310588, type: 3}
+      propertyPath: m_Name
+      value: SM_Prop_Barrier_02 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bda712f3633c1848a137f9f5f310588, type: 3}
@@ -1215,3 +1216,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2cf1eb586650a459303407f63989bc, type: 3}
+--- !u!84 &2057045798
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 575
+  m_Height: 339
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 74
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
